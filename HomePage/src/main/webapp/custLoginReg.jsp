@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +12,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 
 <body>
 	<header class="navHeader">
@@ -29,35 +32,40 @@
 			</ul>
 		</nav>
 	</header>
-	
+
 	<section class="backgroundWebsite">
+
 		<div class="customerLogin-wrapper">
 			<div class="button-box">
 				<div id="btn"></div>
 				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
 				<button type="button" class="toggle-btn" onclick="register()">Register</button>
 			</div>
-		<form id="login" class="input-group">
-			<input type="text" class="input-field" placeholder="User ID" required>
+		
+		<form id="login" class="input-group" method="post" action="customerCheck">
+			<input type="text" class="input-field" name="custusername" placeholder="Username" required>
 			
-			<input type="text" class="input-field" placeholder="Enter Password" required>
+			<input type="text" class="input-field" name="custpassword" placeholder="Enter Password" required>
 			
 			<input type="checkbox" class="check-box"><span>Remember Password</span>
 			
 			<button type="submit" class="submit-btn">Log In</button>
 		</form>
-		<form id="register" class="input-group">
-			<input type="text" class="input-field" placeholder="User ID" required>
+		
+		<form id="register" class="input-group" method="post" action="customerCheck">
+			<input type="text" class="input-field" name="custusername" placeholder="Username" required>
 			
-			<input type="email" class="input-field" placeholder="Email ID" required>
+			<input type="email" class="input-field" name="custemail" placeholder="Email" required>
 			
-			<input type="text" class="input-field" placeholder="Enter Password" required>
+			<input type="text" class="input-field" name="custpassword" placeholder="Enter Password" required>
 			
 			<input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
 			
 			<button type="submit" class="submit-btn">Register</button>
 		</form>
+		
 		</div>
+
 	</section>
 
 <script>
