@@ -9,8 +9,8 @@
 		<servlet-class>package1.staffDeletePage</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>R3</servlet-name>
-		<servlet-class>package1.staffEdit</servlet-class>
+		<servlet-name>R12</servlet-name>
+		<servlet-class>package1.StaffEditPage</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>R4</servlet-name>
@@ -34,8 +34,8 @@
 		<url-pattern>/staffDeletePage</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>R3</servlet-name>
-		<url-pattern>/staffEdit</url-pattern>
+		<servlet-name>R12</servlet-name>
+		<url-pattern>/StaffEditPage</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>R4</servlet-name>

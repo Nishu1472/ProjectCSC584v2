@@ -34,7 +34,7 @@
 		<div class="staffSearch-wrapper">
 			<div class="staffSearch-form-box">
 				<h2>Edit Product</h2>
-					<form action = "staffEdit" method="post">
+					<form action="StaffEditPage" method="post">
 					<div class="staffSearch-input-box">
 						<input type="text" name="checkProductID" required>
 						<label>Product ID</label>
