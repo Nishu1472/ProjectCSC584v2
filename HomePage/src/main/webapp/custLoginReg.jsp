@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
 
 <head>
@@ -52,14 +52,17 @@
 			<button type="submit" class="submit-btn">Log In</button>
 		</form>
 		
-		<form id="register" class="input-group" method="post" action="customerCheck">
+		<form id="register" class="input-group" method="post" action="customerAdd">
+		
+			<input type="text" class="input-field" name="custname" placeholder="Full Name" required>
+			
 			<input type="text" class="input-field" name="custusername" placeholder="Username" required>
 			
 			<input type="email" class="input-field" name="custemail" placeholder="Email" required>
 			
 			<input type="text" class="input-field" name="custpassword" placeholder="Enter Password" required>
 			
-			<input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+			<input type="text" class="input-field" name="custphonenum" placeholder="Enter Phone Number" required>
 			
 			<button type="submit" class="submit-btn">Register</button>
 		</form>

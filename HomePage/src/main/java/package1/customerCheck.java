@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "R2", urlPatterns = {"/customerCheck"})
+@WebServlet(name = "R6", urlPatterns = {"/customerCheck"})
 public class customerCheck extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -41,7 +41,7 @@ public class customerCheck extends HttpServlet {
 			response.sendRedirect("staffDashboard.jsp");
 		
 		else if (check == false)
-			response.sendRedirect("staffDashboard.jsp");
+			response.sendRedirect("custLoginReg.jsp");
 	}
 	catch(Exception e2) {
 		System.out.println(e2);

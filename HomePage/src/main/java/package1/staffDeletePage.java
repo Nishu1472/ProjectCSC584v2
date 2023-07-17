@@ -24,7 +24,7 @@ public class staffDeletePage extends HttpServlet {
 
     try {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/capt_empire?", "root", "admin");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/capt_empire", "root", "root");
 
         Statement stmt = con.createStatement();
         String sql = "SELECT * FROM PRODUCTDETAILS";
@@ -92,7 +92,6 @@ public class staffDeletePage extends HttpServlet {
             out.println("</div>");
             out.println("</div>");
             out.println("</section>");
-            out.println("<script src=\"script.js\"></script>");
             out.println("</body>");
             out.println("</html>");
         } else {
@@ -101,7 +100,6 @@ public class staffDeletePage extends HttpServlet {
 
     } catch (Exception e2) {
         System.out.println(e2);
-        response.sendRedirect("error.jsp"); // Handle error redirection appropriately
     }
 
     out.close();
