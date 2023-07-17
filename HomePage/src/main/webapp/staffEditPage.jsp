@@ -1,57 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-.myDiv {
-  border: 5px outset;
-  background-color: black;
-  color: white;
-}
-.myDiv2 {
-  border: 3px outset;
-  background-size: 50% auto;
-  background-color: white;
-  color: black;
-  width:50%;
-}
-</style>
-<meta charset="ISO-8859-1">
-<title>Update Clothes</title>
-<link rel="icon" href="logo.png" type="image/x-icon">
+	<meta charset="ISO-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Product | Staff</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body style="background-color:lightgray;">
-<center>
-<div class="myDiv">
-<h1>Update Clothes</h1>
-</div>
-</center>
-<br>
-<center>
-<div class="myDiv2">
-Enter the ID of the cloth you want to update:
-<br>
-<form>
-<input type=text name=updateClothId><br>
-<br>
-<input type=submit>
-<input type=reset>
-</form>
-</div>
-<br>
-<div class="myDiv2">
-<form method="post">
-Cloth ID:<br><input type=text name=clothId value=001 width=100%><br>
-<br>
-Cloth Name:<br><input type=text name=clothName value=Flannel width=50%><br>
-<br>
-Cloth Price:<br><input type=text name=clothPrice value=129.90 width=50%><br>
-<br>
-Cloth Description:<br><input type=text name=clothDescription value="Soft and Comfy" width=50%><br>
-<br>
-<input type=submit>
-<input type=reset>
-</form>
-</div>
-</center>
+<body>
+	<header class="navHeader">
+		<a href="mainHome.html" class="navLogo">CaptEmpire</a>
+		
+		<nav class="navbar">
+			<input type="checkbox" id="navbarCheck">
+			<label for = "navbarCheck" class="navbarCheckbtn">
+				<i class='bx bx-menu'></i>
+			</label>
+			
+			<ul class="navbarMenu">
+				<li><a href="mainHome.html" class="active">Home</a></li>
+				<li><a href="aboutUs.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#">FAQs</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section class="backgroundWebsite">
+		<div class="staffSearch-wrapper">
+			<div class="staffSearch-form-box">
+				<h2>Edit Product</h2>
+					<form action = "staffEdit" method="post">
+					<div class="staffSearch-input-box">
+						<input type="text" name="checkProductID" required>
+						<label>Product ID</label>
+					</div>
+					<button type="submit" class="search-btn">Search</button>
+					</form>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

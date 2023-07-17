@@ -21,7 +21,7 @@ public class customerCheck extends HttpServlet {
 	
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/custdetails", "root", "root");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/custdetails", "root", "admin");
 		
 		Statement stmt = con.createStatement();
 		String sql = "SELECT * FROM CUSTDETAILS";

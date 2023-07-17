@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "R2", urlPatterns = {"/staffDeletePage"})
-public class staffDeletePage extends HttpServlet {
+@WebServlet(name = "R3", urlPatterns = {"/staffEdit"})
+public class staffEdit extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -75,20 +75,23 @@ public class staffDeletePage extends HttpServlet {
             out.println("<section class=\"backgroundWebsite\">");
             out.println("<div class=\"staffForm-wrapper\">");
             out.println("<div class=\"staffForm-form-box-register\">");
-            out.println("<h2>Delete Info</h2>");
-            out.println("<h6>Data Deleted Successfully</h6>");
+            out.println("<h2>Edit Form</h2>");
+            out.println("<h6>Change any data needed!</h6>");
+            out.println("<form action = \"editProduct\" method=\"post\">");
             out.println("<div class=\"staffForm-input-box\">");
-            out.println("<input type=\"text\" name=\"productID\" value=\"ID: " + productID + "\" readonly>");
+            out.println("<input type=\"text\" name=\"productID\" value=\"ID: " + productID + "\" >");
             out.println("</div>");
             out.println("<div class=\"staffForm-input-box\">");
-            out.println("<input type=\"text\" name=\"productName\" value=\"Name: " + productName + "\" readonly>");
+            out.println("<input type=\"text\" name=\"productName\" value=\"Name: " + productName + "\" >");
             out.println("</div>");
             out.println("<div class=\"staffForm-input-box\">");
-            out.println("<input type=\"text\" name=\"productPrice\" value=\"Price: " + productPrice + "\" readonly>");
+            out.println("<input type=\"text\" name=\"productPrice\" value=\"Price: " + productPrice + "\" >");
             out.println("</div>");
             out.println("<div class=\"staffForm-input-box\">");
-            out.println("<input type=\"text\" name=\"productDesc\" value=\"Description: " + productDesc + "\" readonly>");
+            out.println("<input type=\"text\" name=\"productDesc\" value=\"Description: " + productDesc + "\" >");
             out.println("</div>");
+            out.println("<button type=\"submit\" class=\"search-btn\">Edit</button>");
+            out.println("</form>");
             out.println("</div>");
             out.println("</div>");
             out.println("</section>");
