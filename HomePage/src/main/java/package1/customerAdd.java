@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name="R3", urlPatterns={"/customer"})
+@WebServlet(name="R3", urlPatterns={"/customerAdd"})
 public class customerAdd extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -33,13 +33,13 @@ public class customerAdd extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/custdetails", "root", "root");
 			
-			PreparedStatement ps = con.prepareStatement("insert into custdetails values (?, ?, ?)");
+			PreparedStatement ps = con.prepareStatement("INSERT INTO custdetails Values (?, ?, ?)");
 			
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ps.setString(3, email);
 			
-			int i=ps.executeUpdate();
+			int i = ps.executeUpdate();
 			if(i>0)
 				out.print("You have successfully registered");
 		}catch (Exception e2) {
