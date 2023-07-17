@@ -6,11 +6,7 @@
 	</servlet>
 	<servlet>
 		<servlet-name>R2</servlet-name>
-		<servlet-class>package1.staffDeletePage</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>R3</servlet-name>
-		<servlet-class>package1.deleteProduct</servlet-class>
+		<servlet-class>package1.staffDelete</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>R6</servlet-name>
@@ -27,11 +23,7 @@
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>R2</servlet-name>
-		<url-pattern>/staffDeletePage</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>R3</servlet-name>
-		<url-pattern>/deleteProduct</url-pattern>
+		<url-pattern>/staffDelete</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>R6</servlet-name>
@@ -44,8 +36,7 @@
 	
 	<welcome-file-list>
 		<welcome-file>staffLogin.jsp</welcome-file>
-		<welcome-file>staffDashboard.jsp</welcome-file>
-		<welcome-file>staffDeletePage.java</welcome-file>
+		<welcome-file>staffDeletePage.jsp</welcome-file>
 		<welcome-file>custLoginReg.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

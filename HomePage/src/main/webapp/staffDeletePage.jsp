@@ -34,10 +34,9 @@
 		<div class="staffSearch-wrapper">
 			<div class="staffSearch-form-box">
 				<h2>Search Product</h2>
-					<form action = "staffDeletePage" method="post">
+					<form action = "staffDelete" method="post">
 					<div class="staffSearch-input-box">
 						<input type="text" name="checkProductID" required>
-						<input type="hidden" name="deleteAction" value="delete">
 						<label>Product ID</label>
 					</div>
 					<button type="submit" class="search-btn">Search</button>
