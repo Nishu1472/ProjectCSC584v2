@@ -37,6 +37,7 @@
 					<form action = "staffDeletePage" method="post">
 					<div class="staffSearch-input-box">
 						<input type="text" name="checkProductID" required>
+						<input type="hidden" name="deleteAction" value="delete">
 						<label>Product ID</label>
 					</div>
 					<button type="submit" class="search-btn">Search</button>

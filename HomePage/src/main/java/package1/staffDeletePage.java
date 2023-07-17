@@ -24,7 +24,7 @@ public class staffDeletePage extends HttpServlet {
 
     try {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/capt_empire", "root", "admin");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/capt_empire?", "root", "admin");
 
         Statement stmt = con.createStatement();
         String sql = "SELECT * FROM PRODUCTDETAILS";
@@ -75,8 +75,8 @@ public class staffDeletePage extends HttpServlet {
             out.println("<section class=\"backgroundWebsite\">");
             out.println("<div class=\"staffForm-wrapper\">");
             out.println("<div class=\"staffForm-form-box-register\">");
-            out.println("<h2>Delete Form</h2>");
-            out.println("<h6>Confirm deletion of this product?</h6>");
+            out.println("<h2>Delete Info</h2>");
+            out.println("<h6>Data Deleted Successfully</h6>");
             out.println("<div class=\"staffForm-input-box\">");
             out.println("<input type=\"text\" name=\"productID\" value=\"ID: " + productID + "\" readonly>");
             out.println("</div>");
@@ -89,47 +89,21 @@ public class staffDeletePage extends HttpServlet {
             out.println("<div class=\"staffForm-input-box\">");
             out.println("<input type=\"text\" name=\"productDesc\" value=\"Description: " + productDesc + "\" readonly>");
             out.println("</div>");
-            out.println("<button type=\"submit\" class=\"delete-btn\">Delete</button>");
             out.println("</div>");
             out.println("</div>");
             out.println("</section>");
             out.println("<script src=\"script.js\"></script>");
             out.println("</body>");
-            out.println("</html>");                
-            out.println("<div class=\"staffForm-form-box-register\">");
-            out.println("<h2>Delete Form</h2>");
-            out.println("<h6>Confirm deletion of this product?</h6>");
-            out.println("<div class=\"staffForm-input-box\">");
-            out.println("<input type=\"text\" name=\"productID\" required>");
-            out.println("<label>ID</label>");
-            out.println("</div>");
-            out.println("<div class=\"staffForm-input-box\">");
-            out.println("<input type=\"text\" name=\"productName\" required>");
-            out.println("<label>Name</label>");
-            out.println("</div>");
-            out.println("<div class=\"staffForm-input-box\">");
-            out.println("<input type=\"text\" name=\"productPrice\" required>");
-            out.println("<label>Price</label>");
-            out.println("</div>");
-            out.println("<div class=\"staffForm-input-box\">");
-            out.println("<input type=\"text\" name=\"productDesc\" required>");
-            out.println("<label>Description</label>");
-            out.println("</div>");
-                    out.println("<button type=\"submit\" class=\"delete-btn\">Delete</button>");
-                    out.println("</div>");
-                    out.println("</div>");
-                    out.println("</section>");
-                    out.println("<script src=\"script.js\"></script>");
-                    out.println("</body>");
-                    out.println("</html>");
+            out.println("</html>");
+        } else {
+            response.sendRedirect("staffDeletePage.jsp");
         }
-   
-            else
-            	response.sendRedirect("staffDeletePage.jsp");
-   
-        } catch (Exception e2) {
-            System.out.println(e2);
-        }
-        out.close();
+
+    } catch (Exception e2) {
+        System.out.println(e2);
+        response.sendRedirect("error.jsp"); // Handle error redirection appropriately
     }
+
+    out.close();
+}
 }
