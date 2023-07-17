@@ -6,7 +6,7 @@
 	</servlet>
 	<servlet>
 		<servlet-name>R2</servlet-name>
-		<servlet-class>package1.staffDelete</servlet-class>
+		<servlet-class>package1.staffDeletePage</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>R6</servlet-name>
@@ -23,7 +23,7 @@
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>R2</servlet-name>
-		<url-pattern>/staffDelete</url-pattern>
+		<url-pattern>/staffDeletePage</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>R6</servlet-name>

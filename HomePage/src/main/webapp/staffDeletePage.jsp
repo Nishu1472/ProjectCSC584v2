@@ -34,7 +34,7 @@
 		<div class="staffSearch-wrapper">
 			<div class="staffSearch-form-box">
 				<h2>Search Product</h2>
-					<form action = "staffDelete" method="post">
+					<form action = "staffDeletePage" method="post">
 					<div class="staffSearch-input-box">
 						<input type="text" name="checkProductID" required>
 						<label>Product ID</label>
