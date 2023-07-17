@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>R1</servlet-name>
+		<servlet-class>package1.StaffCheck</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>R2</servlet-name>
+		<servlet-class>package1.staffDeletePage</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>R6</servlet-name>
+		<servlet-class>package1.customerCheck</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>R1</servlet-name>
+		<url-pattern>/StaffCheck</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>R2</servlet-name>
+		<url-pattern>/staffDeletePage</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>R6</servlet-name>
+		<url-pattern>/customerCheck</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>staffLogin.jsp</welcome-file>
+		<welcome-file>staffDashboard.jsp</welcome-file>
+		<welcome-file>custLoginReg.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
